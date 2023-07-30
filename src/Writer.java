@@ -6,7 +6,7 @@ public class Writer {
         try(FileWriter writer = new FileWriter(fileCreator.getDb(), true)){
             writer.write(listCreator.getDbList().toString() + '\n');
         }catch (IOException e){
-            System.err.println(e.getMessage());
+            e.printStackTrace();
         }
     }
 }
